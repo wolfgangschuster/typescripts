@@ -1,0 +1,50 @@
+%D \module
+%D   [     file=type-baskerville,
+%D      version=2011.09.24,
+%D        title=\CONTEXT\ Typescript Macros,
+%D     subtitle=Baskerville Font Definitions,
+%D       author=Wolfgang Schuster,
+%D         date=\currentdate,
+%D    copyright=Wolfgang Schuster,
+%D      license=GNU General Public License]
+
+%C Copyright (C) 2011  Wolfgang Schuster
+%C
+%C This program is free software: you can redistribute it and/or modify
+%C it under the terms of the GNU General Public License as published by
+%C the Free Software Foundation, either version 3 of the License, or
+%C any later version.
+%C
+%C This program is distributed in the hope that it will be useful,
+%C but WITHOUT ANY WARRANTY; without even the implied warranty of
+%C MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%C GNU General Public License for more details.
+%C
+%C You should have received a copy of the GNU General Public License
+%C along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+\starttypescriptcollection [baskerville]
+
+\starttypescript [\s!serif] [baskerville]
+    \definefontsynonym [Baskerville-Regular]    [\s!file:Baskerville-Nova-Regular]    [\s!features=\s!default]
+    \definefontsynonym [Baskerville-Italic]     [\s!file:Baskerville-Nova-Italic]     [\s!features=\s!default]
+    \definefontsynonym [Baskerville-Bold]       [\s!file:Baskerville-Nova-Bold]       [\s!features=\s!default]
+    \definefontsynonym [Baskerville-BoldItalic] [\s!file:Baskerville-Nova-BoldItalic] [\s!features=\s!default]
+\stoptypescript
+
+\starttypescript [\s!serif] [baskerville]
+    \setups[\s!font:\s!fallback:\s!serif]
+    \definefontsynonym [\s!Serif]           [Baskerville-Regular]    [\s!features=\s!default]
+    \definefontsynonym [\s!SerifItalic]     [Baskerville-Italic]     [\s!features=\s!default]
+    \definefontsynonym [\s!SerifBold]       [Baskerville-Bold]       [\s!features=\s!default]
+    \definefontsynonym [\s!SerifBoldItalic] [Baskerville-BoldItalic] [\s!features=\s!default]
+\stoptypescript
+
+\starttypescript [baskerville]
+    \definetypeface [baskerville] [rm] [\s!serif] [baskerville] [\s!default]
+    \quittypescriptscanning
+\stoptypescript
+
+\stoptypescriptcollection
+
+\endinput

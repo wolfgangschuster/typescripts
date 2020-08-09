@@ -1,0 +1,60 @@
+%D \module
+%D   [     file=type-freefont,
+%D      version=2012.12.02,
+%D        title=\CONTEXT\ Typescript Macros,
+%D     subtitle=GNU Freefont Font Definitions,
+%D       author=Wolfgang Schuster,
+%D         date=\currentdate,
+%D    copyright=Wolfgang Schuster,
+%D      license=GNU General Public License]
+
+%C Copyright (C) 2012  Wolfgang Schuster
+%C
+%C This program is free software: you can redistribute it and/or modify
+%C it under the terms of the GNU General Public License as published by
+%C the Free Software Foundation, either version 3 of the License, or
+%C (at your option) any later version.
+%C
+%C This program is distributed in the hope that it will be useful,
+%C but WITHOUT ANY WARRANTY; without even the implied warranty of
+%C MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%C GNU General Public License for more details.
+%C
+%C You should have received a copy of the GNU General Public License
+%C along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+\starttypescriptcollection [freefont]
+
+\starttypescript [\s!serif] [freefont]
+  \setups[\s!font:\s!fallback:\s!serif]
+  \definefontsynonym [\s!Serif]           [\s!file:freeserif]
+  \definefontsynonym [\s!SerifItalic]     [\s!file:freeserifitalic]
+  \definefontsynonym [\s!SerifBold]       [\s!file:freeserifbold]
+  \definefontsynonym [\s!SerifBoldItalic] [\s!file:freeserifbolditalic]
+\stoptypescript
+
+\starttypescript [\s!sans] [freefont]
+  \setups[\s!font:\s!fallback:\s!sans]
+  \definefontsynonym [\s!Sans]           [\s!file:freesans]
+  \definefontsynonym [\s!SansItalic]     [\s!file:freesansoblique]
+  \definefontsynonym [\s!SansBold]       [\s!file:freesansbold]
+  \definefontsynonym [\s!SansBoldItalic] [\s!file:freesansboldoblique]
+\stoptypescript
+
+\starttypescript [\s!mono] [freefont]
+  \setups[\s!font:\s!fallback:\s!mono]
+  \definefontsynonym [\s!Mono]           [\s!file:freemono]
+  \definefontsynonym [\s!MonoItalic]     [\s!file:freemonooblique]
+  \definefontsynonym [\s!MonoBold]       [\s!file:freemonobold]
+  \definefontsynonym [\s!MonoBoldItalic] [\s!file:freemonoboldoblique]
+\stoptypescript
+
+\starttypescript [freefont]
+  \definetypeface [\typescriptone] [\s!rm] [\s!serif] [\typescriptone] [\s!default] [\s!features=\s!default]
+  \definetypeface [\typescriptone] [\s!ss] [\s!sans]  [\typescriptone] [\s!default] [\s!features=\s!default]
+  \definetypeface [\typescriptone] [\s!tt] [\s!mono]  [\typescriptone] [\s!default] [\s!features=\s!none]
+  \definetypeface [\typescriptone] [\s!mm] [\s!math]  [modern]         [\s!default]
+  \quittypescriptscanning
+\stoptypescript
+
+\stoptypescriptcollection

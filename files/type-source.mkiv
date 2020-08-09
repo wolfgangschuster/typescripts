@@ -1,0 +1,71 @@
+%D \module
+%D   [     file=type-source,
+%D      version=2012.09.27,
+%D        title=\CONTEXT\ Typescript Macros,
+%D     subtitle=Source Sans Pro/Source Code Pro Font Definitions,
+%D       author=Wolfgang Schuster,
+%D         date=\currentdate,
+%D    copyright=Wolfgang Schuster,
+%D      license=GNU General Public License]
+
+%C Copyright (C) 2012  Wolfgang Schuster
+%C
+%C This program is free software: you can redistribute it and/or modify
+%C it under the terms of the GNU General Public License as published by
+%C the Free Software Foundation, either version 3 of the License, or
+%C any later version.
+%C
+%C This program is distributed in the hope that it will be useful,
+%C but WITHOUT ANY WARRANTY; without even the implied warranty of
+%C MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%C GNU General Public License for more details.
+%C
+%C You should have received a copy of the GNU General Public License
+%C along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+\starttypescriptcollection [source]
+
+\starttypescript [\s!sans] [source]
+  \definefontsynonym[SourceSansPro-Black]            [\s!file:SourceSansPro-Black.otf]
+  \definefontsynonym[SourceSansPro-BlackItalic]      [\s!file:SourceSansPro-BlackIt.otf]
+  \definefontsynonym[SourceSansPro-Bold]             [\s!file:SourceSansPro-Bold.otf]
+  \definefontsynonym[SourceSansPro-BoldItalic]       [\s!file:SourceSansPro-BoldIt.otf]
+  \definefontsynonym[SourceSansPro-ExtraLight]       [\s!file:SourceSansPro-ExtraLight.otf]
+  \definefontsynonym[SourceSansPro-ExtraLightItalic] [\s!file:SourceSansPro-ExtraLightIt.otf]
+  \definefontsynonym[SourceSansPro-Italic]           [\s!file:SourceSansPro-It.otf]
+  \definefontsynonym[SourceSansPro-Light]            [\s!file:SourceSansPro-Light.otf]
+  \definefontsynonym[SourceSansPro-LightItalic]      [\s!file:SourceSansPro-LightIt.otf]
+  \definefontsynonym[SourceSansPro-Regular]          [\s!file:SourceSansPro-Regular.otf]
+  \definefontsynonym[SourceSansPro-Semibold]         [\s!file:SourceSansPro-Semibold.otf]
+  \definefontsynonym[SourceSansPro-SemiboldItalic]   [\s!file:SourceSansPro-SemiboldIt.otf]
+\stoptypescript
+
+\starttypescript [\s!sans] [source]
+  \setups[\s!font:\s!fallback:\s!sans]
+  \definefontsynonym [\s!Sans]           [SourceSansPro-Regular]
+  \definefontsynonym [\s!SansItalic]     [SourceSansPro-Italic]
+  \definefontsynonym [\s!SansBold]       [SourceSansPro-Bold]
+  \definefontsynonym [\s!SansBoldItalic] [SourceSansPro-BoldItalic]
+\stoptypescript
+
+\starttypescript [\s!mono] [source]
+  \definefontsynonym [SourceCodePro-ExtraLight] [\s!file:SourceCodePro-ExtraLight.otf]
+  \definefontsynonym [SourceCodePro-Light]      [\s!file:SourceCodePro-Light.otf]
+  \definefontsynonym [SourceCodePro-Regular]    [\s!file:SourceCodePro-Regular.otf]
+  \definefontsynonym [SourceCodePro-Semibold]   [\s!file:SourceCodePro-Semibold.otf]
+  \definefontsynonym [SourceCodePro-Bold]       [\s!file:SourceCodePro-Bold.otf]
+  \definefontsynonym [SourceCodePro-Black]      [\s!file:SourceCodePro-Black.otf]
+\stoptypescript
+
+\starttypescript [\s!mono] [source]
+  \setups[\s!font:\s!fallback:\s!mono]
+  \definefontsynonym [\s!Mono]     [SourceCodePro-Regular]
+  \definefontsynonym [\s!MonoBold] [SourceCodePro-Bold]
+\stoptypescript
+
+\starttypescript [source]
+  \definetypescript [\typescriptone] [\s!ss] [\s!sans] [\typescriptone] [\s!default] [\s!features=\s!default]
+  \definetypescript [\typescriptone] [\s!tt] [\s!mono] [\typescriptone] [\s!default] [\s!features=\s!none   ]
+\stoptypescript
+
+\stoptypescriptcollection
