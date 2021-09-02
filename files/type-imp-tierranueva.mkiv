@@ -1,5 +1,5 @@
 %D \module
-%D   [     file=type-tierranueva,
+%D   [     file=type-imp-tierranueva,
 %D      version=2012.05.07,
 %D        title=\CONTEXT\ Typescript Macros,
 %D     subtitle=Tierra Nueva Font Definitions,
@@ -26,12 +26,10 @@
 \starttypescriptcollection [tierranueva]
 
 \starttypescript [\s!serif] [tierranueva]
-  \definefontsynonym [\s!Serif]            [\s!file:tierranuevanorte]
-  \definefontsynonym [\s!SerifItalic]      [\s!file:tierranuevanorteitalic]
-  \definefontsynonym [\s!SerifBold]        [\s!file:tierranuevanortebold]
-  \definefontsynonym [\s!SerifSlanted]     [\s!SerifItalic]
-  \definefontsynonym [\s!SerifBoldItalic]  [\s!SerifBold]
-  \definefontsynonym [\s!SerifBoldSlanted] [\s!SerifBold]
+    \setup[\s!font:\s!fallback:\s!serif]
+    \definefontsynonym [\s!Serif]       [\s!file:tierranuevanorte]
+    \definefontsynonym [\s!SerifItalic] [\s!file:tierranuevanorteitalic]
+    \definefontsynonym [\s!SerifBold]   [\s!file:tierranuevanortebold]
 \stoptypescript
 
 \starttypescript [\s!calligraphy] [tierranueva]
@@ -45,3 +43,5 @@
 \stoptypescript
 
 \stoptypescriptcollection
+
+\endinput

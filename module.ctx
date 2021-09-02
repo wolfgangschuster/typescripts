@@ -1,0 +1,16 @@
+<?xml version='1.0' standalone='yes'?>
+
+<ctx:job>
+    <ctx:message>Module packager</ctx:message>
+    <ctx:preprocess/>
+    <ctx:flags>
+        <ctx:flag>purgeall</ctx:flag>
+        <ctx:flag>once</ctx:flag>
+    </ctx:flags>
+    <ctx:process>
+        <ctx:resources>
+            <ctx:environment>ctx-module.tex</ctx:environment>
+        </ctx:resources>
+    </ctx:process>
+    <ctx:postprocess/>
+</ctx:job>

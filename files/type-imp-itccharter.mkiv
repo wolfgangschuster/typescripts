@@ -1,5 +1,5 @@
 %D \module
-%D   [     file=type-charter,
+%D   [     file=type-imp-itccharter,
 %D      version=2010.09.13,
 %D        title=\CONTEXT\ Typescript Macros,
 %D     subtitle=Charter Font Definitions,
@@ -23,9 +23,9 @@
 %C You should have received a copy of the GNU General Public License
 %C along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-\starttypescriptcollection[charter]
+\starttypescriptcollection[itccharter]
 
-\starttypescript [\s!serif] [charter,charter-bold]
+\starttypescript [\s!serif] [itccharter,itc-charter,itccharter-bold,itc-charter-bold]
     \definefontsynonym [CharterITC-Regular]     [\s!file:charteritcproregular]     [\s!features=\s!default]
     \definefontsynonym [CharterITC-Italic]      [\s!file:charteritcproitalic]      [\s!features=\s!default]
     \definefontsynonym [CharterITC-Bold]        [\s!file:charteritcprobold]        [\s!features=\s!default]
@@ -34,7 +34,7 @@
     \definefontsynonym [CharterITC-BlackItalic] [\s!file:charteritcproblackitalic] [\s!features=\s!default]
 \stoptypescript
 
-\starttypescript [\s!serif] [charter]
+\starttypescript [\s!serif] [itccharter,itc-charter]
     \setups[\s!font:\s!fallback:\s!serif]
     \definefontsynonym [\s!Serif]           [CharterITC-Regular]    [\s!features=\s!default]
     \definefontsynonym [\s!SerifItalic]     [CharterITC-Italic]     [\s!features=\s!default]
@@ -43,7 +43,7 @@
     \definefontsynonym [\s!SerifCaps]       [CharterITC-Regular]    [\s!features=\s!smallcaps]
 \stoptypescript
 
-\starttypescript [\s!serif] [charter-bold]
+\starttypescript [\s!serif] [itccharter-bold,itc-charter-bold]
     \setups[\s!font:\s!fallback:\s!serif]
     \definefontsynonym [\s!Serif]           [CharterITC-Bold]        [\s!features=\s!default]
     \definefontsynonym [\s!SerifItalic]     [CharterITC-BoldItalic]  [\s!features=\s!default]
@@ -52,7 +52,7 @@
     \definefontsynonym [\s!SerifCaps]       [CharterITC-Bold]        [\s!features=\s!smallcaps]
 \stoptypescript
 
-\starttypescript [charter,charter-bold]
+\starttypescript [itccharter,itc-charter,itccharter-bold,itc-charter-bold]
     \definetypeface [\typescriptone] [rm] [\s!serif] [\typescriptone] [\s!default]
     \definetypeface [\typescriptone] [ss] [\s!sans]  [modern]         [\s!default]
     \definetypeface [\typescriptone] [tt] [\s!mono]  [modern]         [\s!default]

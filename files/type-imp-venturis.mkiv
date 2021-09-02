@@ -1,5 +1,5 @@
 %D \module
-%D   [     file=type-venturis,
+%D   [     file=type-imp-venturis,
 %D      version=2012.05.07,
 %D        title=\CONTEXT\ Typescript Macros,
 %D     subtitle=Venturis Font Definitions,
@@ -26,32 +26,32 @@
 \starttypescriptcollection [venturis]
 
 \starttypescript [\s!serif] [venturis]
-  \definefontsynonym [\s!Serif]            [\s!file:venturisadfregular]
-  \definefontsynonym [\s!SerifItalic]      [\s!file:venturisadfitalic]
-  \definefontsynonym [\s!SerifBold]        [\s!file:venturisadfbold]
-  \definefontsynonym [\s!SerifBoldItalic]  [\s!file:venturisadfbolditalic]
-  \definefontsynonym [\s!SerifSlanted]     [\s!SerifItalic]
-  \definefontsynonym [\s!SerifBoldSlanted] [\s!SerifBold]
+    \setup[\s!font:\s!fallback:\s!serif]
+    \definefontsynonym [\s!Serif]            [\s!file:venturisadfregular]
+    \definefontsynonym [\s!SerifItalic]      [\s!file:venturisadfitalic]
+    \definefontsynonym [\s!SerifBold]        [\s!file:venturisadfbold]
+    \definefontsynonym [\s!SerifBoldItalic]  [\s!file:venturisadfbolditalic]
 \stoptypescript
 
 \starttypescript [\s!sans] [venturis]
-  \definefontsynonym [\s!Serif]            [\s!file:venturissansadfregular]
-  \definefontsynonym [\s!SerifItalic]      [\s!file:venturissansadfitalic]
-  \definefontsynonym [\s!SerifBold]        [\s!file:venturissansadfbold]
-  \definefontsynonym [\s!SerifBoldItalic]  [\s!file:venturissansadfbolditalic]
-  \definefontsynonym [\s!SerifSlanted]     [\s!SerifItalic]
-  \definefontsynonym [\s!SerifBoldSlanted] [\s!SerifBold]
+    \setup[\s!font:\s!fallback:\s!sans]
+    \definefontsynonym [\s!Serif]            [\s!file:venturissansadfregular]
+    \definefontsynonym [\s!SerifItalic]      [\s!file:venturissansadfitalic]
+    \definefontsynonym [\s!SerifBold]        [\s!file:venturissansadfbold]
+    \definefontsynonym [\s!SerifBoldItalic]  [\s!file:venturissansadfbolditalic]
 \stoptypescript
 
 \starttypescript [\s!math] [venturis]
-  \definefontsynonym [\s!MathRoman] [\s!file:venturisadfmathregular] [\s!features=\s!math\mathsizesuffix]
+    \definefontsynonym [\s!MathRoman] [\s!file:venturisadfmathregular] [\s!features=\s!math\mathsizesuffix]
 \stoptypescript
 
 \starttypescript [venturis]
-  \definetypeface [\typescriptone] [\s!rm] [\s!serif] [\typescriptone] [\s!default] [\s!features=\s!default]
-  \definetypeface [\typescriptone] [\s!ss] [\s!sans]  [\typescriptone] [\s!default] [\s!features=\s!default]
-  \definetypeface [\typescriptone] [\s!tt] [\s!mono]  [modern]         [\s!default] [\s!features=\s!none]
-  \definetypeface [\typescriptone] [\s!mm] [\s!math]  [\typescriptone] [\s!default]
+    \definetypeface [\typescriptone] [\s!rm] [\s!serif] [\typescriptone] [\s!default] [\s!features=\s!default]
+    \definetypeface [\typescriptone] [\s!ss] [\s!sans]  [\typescriptone] [\s!default] [\s!features=\s!default]
+    \definetypeface [\typescriptone] [\s!tt] [\s!mono]  [modern]         [\s!default] [\s!features=\s!none]
+    \definetypeface [\typescriptone] [\s!mm] [\s!math]  [\typescriptone] [\s!default]
 \stoptypescript
 
 \stoptypescriptcollection
+
+\endinput

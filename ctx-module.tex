@@ -1,0 +1,45 @@
+\startluacode
+
+thirddata = thirddata or { }
+
+function thirddata.package(name)
+    os.execute("zip -r " .. name .. "-" .. os.date("%Y.%m.%d") .. ".zip tex doc source fonts")
+end
+
+\stopluacode
+
+\startxmlsetups xml:package
+    \xmlsetsetup{\xmldocument}{package|file}{*}
+\stopxmlsetups
+
+\xmlregistersetup{xml:package}
+
+\startxmlsetups package
+
+    \xmlflush{#1}
+
+    \ctxlua{thirddata.package("t-\inputfilebarename")}
+
+    \ctxlua{os.execute("rm -r tex doc source fonts")}
+
+\stopxmlsetups
+
+\startxmlsetups file
+
+    \splitfilename{\xmlflush{#1}}
+
+    \ctxlua{dir.mkdirs("\splitoffpath")}
+
+    \startprocesscommalist[files,manual,interface]
+
+        \doiffileelse{##1/\splitoffname}
+            {\ctxlua{file.copy("##1/\splitoffname","\splitofffull")}}
+            {\donothing}
+	
+	\stopprocesscommalist
+
+\stopxmlsetups
+
+\starttext
+\xmlprocess{main}{\inputfilename}{}
+\stoptext
