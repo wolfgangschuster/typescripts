@@ -1,6 +1,6 @@
 %D \module
 %D   [     file=type-imp-museo,
-%D      version=2010.10.27,
+%D      version=2023.07.24,
 %D        title=\CONTEXT\ Typescript Macros,
 %D     subtitle=Museo Font Definitions,
 %D       author=Wolfgang Schuster,
@@ -25,32 +25,98 @@
 
 \starttypescriptcollection [museo]
 
-\starttypescript [\s!serif] [museo]
-    \definefontsynonym [Museo-300] [\s!file:museo300regular] [\s!features=\s!default]
-    \definefontsynonym [Museo-500] [\s!file:museo500regular] [\s!features=\s!default]
-    \definefontsynonym [Museo-700] [\s!file:museo700regular] [\s!features=\s!default]
+\starttypescript [\s!serif] [museo-light,museo,museo-bold]
+    \definefontsynonym [Museo-Thin]         [\s!file:museo100regular] [\s!features=\s!default]
+    \definefontsynonym [Museo-ThinItalic]   [\s!file:museo100italic]  [\s!features=\s!default]
+    \definefontsynonym [Museo-Light]        [\s!file:museo300regular] [\s!features=\s!default]
+    \definefontsynonym [Museo-LightItalic]  [\s!file:museo300italic]  [\s!features=\s!default]
+    \definefontsynonym [Museo-Medium]       [\s!file:museo500regular] [\s!features=\s!default]
+    \definefontsynonym [Museo-MediumItalic] [\s!file:museo500italic]  [\s!features=\s!default]
+    \definefontsynonym [Museo-Bold]         [\s!file:museo700regular] [\s!features=\s!default]
+    \definefontsynonym [Museo-BoldItalic]   [\s!file:museo700italic]  [\s!features=\s!default]
+    \definefontsynonym [Museo-Black]        [\s!file:museo900regular] [\s!features=\s!default]
+    \definefontsynonym [Museo-BlackItalic]  [\s!file:museo900italic]  [\s!features=\s!default]
+\stoptypescript
+
+\starttypescript [\s!serif] [museo-light]
+    \setups[\s!font:\s!fallback:\s!serif]
+    \definefontsynonym [\s!Serif]           [Museo-Light]        [\s!features=\s!default]
+    \definefontsynonym [\s!SerifItalic]     [Museo-LightItalic]  [\s!features=\s!default]
+    \definefontsynonym [\s!SerifBold]       [Museo-Medium]       [\s!features=\s!default]
+    \definefontsynonym [\s!SerifBoldItalic] [Museo-MediumItalic] [\s!features=\s!default]
 \stoptypescript
 
 \starttypescript [\s!serif] [museo]
     \setups[\s!font:\s!fallback:\s!serif]
-    \definefontsynonym [\s!Serif]     [Museo-500] [\s!features=\s!default]
-    \definefontsynonym [\s!SerifBold] [Museo-700] [\s!features=\s!default]
+    \definefontsynonym [\s!Serif]           [Museo-Medium]       [\s!features=\s!default]
+    \definefontsynonym [\s!SerifItalic]     [Museo-MediumItalic] [\s!features=\s!default]
+    \definefontsynonym [\s!SerifBold]       [Museo-Bold]         [\s!features=\s!default]
+    \definefontsynonym [\s!SerifBoldItalic] [Museo-BoldItalic]   [\s!features=\s!default]
 \stoptypescript
 
-\starttypescript [\s!sans] [museo]
-    \definefontsynonym [MuseoSans-Regular] [\s!file:museosans500]       [\s!features=\s!default]
-    \definefontsynonym [MuseoSans-Italic]  [\s!file:museosans500italic] [\s!features=\s!default]
+\starttypescript [\s!serif] [museo-bold]
+    \setups[\s!font:\s!fallback:\s!serif]
+    \definefontsynonym [\s!Serif]           [Museo-Bold]        [\s!features=\s!default]
+    \definefontsynonym [\s!SerifItalic]     [Museo-BoldItalic]  [\s!features=\s!default]
+    \definefontsynonym [\s!SerifBold]       [Museo-Black]       [\s!features=\s!default]
+    \definefontsynonym [\s!SerifBoldItalic] [Museo-BlackItalic] [\s!features=\s!default]
+\stoptypescript
+
+\starttypescript [\s!sans] [museo-light,museo,museo-black]
+    \definefontsynonym [MuseoSans-Thin]         [\s!file:museosans100]       [\s!features=\s!default]
+    \definefontsynonym [MuseoSans-ThinItalic]   [\s!file:museosans100italic] [\s!features=\s!default]
+    \definefontsynonym [MuseoSans-Light]        [\s!file:museosans300]       [\s!features=\s!default]
+    \definefontsynonym [MuseoSans-LightItalic]  [\s!file:museosans300italic] [\s!features=\s!default]
+    \definefontsynonym [MuseoSans-Medium]       [\s!file:museosans500]       [\s!features=\s!default]
+    \definefontsynonym [MuseoSans-MediumItalic] [\s!file:museosans500italic] [\s!features=\s!default]
+    \definefontsynonym [MuseoSans-Bold]         [\s!file:museosans700]       [\s!features=\s!default]
+    \definefontsynonym [MuseoSans-BoldItalic]   [\s!file:museosans700italic] [\s!features=\s!default]
+    \definefontsynonym [MuseoSans-Black]        [\s!file:museosans900]       [\s!features=\s!default]
+    \definefontsynonym [MuseoSans-BlackItalic]  [\s!file:museosans900italic] [\s!features=\s!default]
+\stoptypescript
+
+\starttypescript [\s!sans] [museo-light]
+    \setups[\s!font:\s!fallback:\s!sans]
+    \definefontsynonym [\s!Sans]           [MuseoSans-Light]        [\s!features=\s!default]
+    \definefontsynonym [\s!SansItalic]     [MuseoSans-LightItalic]  [\s!features=\s!default]
+    \definefontsynonym [\s!SansBold]       [MuseoSans-Medium]       [\s!features=\s!default]
+    \definefontsynonym [\s!SansBoldItalic] [MuseoSans-MediumItalic] [\s!features=\s!default]
 \stoptypescript
 
 \starttypescript [\s!sans] [museo]
     \setups[\s!font:\s!fallback:\s!sans]
-    \definefontsynonym [\s!Sans]       [MuseoSans-Regular] [\s!features=\s!default]
-    \definefontsynonym [\s!SansItalic] [MuseoSans-Italic]  [\s!features=\s!default]
+    \definefontsynonym [\s!Sans]           [MuseoSans-Medium]       [\s!features=\s!default]
+    \definefontsynonym [\s!SansItalic]     [MuseoSans-MediumItalic] [\s!features=\s!default]
+    \definefontsynonym [\s!SansBold]       [MuseoSans-Bold]         [\s!features=\s!default]
+    \definefontsynonym [\s!SansBoldItalic] [MuseoSans-BoldItalic]   [\s!features=\s!default]
 \stoptypescript
 
-\starttypescript [museo]
-    \definetypeface [museo] [rm] [\s!serif] [museo] [\s!default]
-    \definetypeface [museo] [ss] [\s!sans]  [museo] [\s!default]
+\starttypescript [\s!sans] [museo-bold]
+    \setups[\s!font:\s!fallback:\s!sans]
+    \definefontsynonym [\s!Sans]           [MuseoSans-Bold]        [\s!features=\s!default]
+    \definefontsynonym [\s!SansItalic]     [MuseoSans-BoldItalic]  [\s!features=\s!default]
+    \definefontsynonym [\s!SansBold]       [MuseoSans-Black]       [\s!features=\s!default]
+    \definefontsynonym [\s!SansBoldItalic] [MuseoSans-BlackItalic] [\s!features=\s!default]
+\stoptypescript
+
+\starttypescript [serif] [museo-slab]
+    \definefontsynonym [MuseoSlab-Thin]             [\s!file:museoslab100]        [\s!features=\s!default]
+    \definefontsynonym [MuseoSlab-ThinItalic]       [\s!file:museoslab100italic]  [\s!features=\s!default]
+    \definefontsynonym [MuseoSlab-Light]            [\s!file:museoslab300]        [\s!features=\s!default]
+    \definefontsynonym [MuseoSlab-LightItalic]      [\s!file:museoslab300italic]  [\s!features=\s!default]
+    \definefontsynonym [MuseoSlab-Medium]           [\s!file:museoslab500]        [\s!features=\s!default]
+    \definefontsynonym [MuseoSlab-MediumItalic]     [\s!file:museoslab500italic]  [\s!features=\s!default]
+    \definefontsynonym [MuseoSlab-Bold]             [\s!file:museoslab700]        [\s!features=\s!default]
+    \definefontsynonym [MuseoSlab-BoldItalic]       [\s!file:museoslab700italic]  [\s!features=\s!default]
+    \definefontsynonym [MuseoSlab-Black]            [\s!file:museoslab900]        [\s!features=\s!default]
+    \definefontsynonym [MuseoSlab-BlackItalic]      [\s!file:museoslab900italic]  [\s!features=\s!default]
+    \definefontsynonym [MuseoSlab-UltraBlack]       [\s!file:museoslab1000]       [\s!features=\s!default]
+    \definefontsynonym [MuseoSlab-UltraBlackItalic] [\s!file:museoslab1000italic] [\s!features=\s!default]
+\stoptypescript
+
+\starttypescript [museo-light,museo,museo-black]
+    \definetypeface [\typescriptone] [\s!rm] [\s!serif] [\typescriptone] [\s!default]
+    \definetypeface [\typescriptone] [\s!ss] [\s!sans]  [\typescriptone] [\s!default]
     \quittypescriptscanning
 \stoptypescript
 
